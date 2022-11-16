@@ -7,8 +7,7 @@
   <a href="https://telegram.me/sanjaybyranna"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/>
 </div>
 
--------------------------------------
-List of Sensors Covered in this Repo
+# List of Sensors Covered in this Repo
 -----------------------------------
 `JoyStick`
 <br/>`Flame Sensor`
