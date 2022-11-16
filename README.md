@@ -7,6 +7,10 @@
   <a href="https://telegram.me/sanjaybyranna"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/>
 </div>
 
+</div>
+<div id="header" align="center" >
+  </br>
+  
 # List of Sensors Covered in this Repo
 [`JoyStick`](https://github.com/Sanjay0302/Sensor-Workshop-/blob/main/Joystick.md)
 [`Flame Sensor`]()
@@ -45,3 +49,7 @@
 [`Analog Hall Sensor`]()
 [`Tap Module`]()
 [`Light Blocking`]()
+
+</div>
+
+--------------------------
