@@ -33,9 +33,3 @@ void loop ()
 }
 
 ```
-
-# Mini Reed switch
-```c
-
-
-```
