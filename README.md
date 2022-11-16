@@ -9,39 +9,39 @@
 
 # List of Sensors Covered in this Repo
 `JoyStick`
-<br/>`Flame Sensor`
-<br/>`RGB LED`
-<br/>`Heartbeat Sensor`
-<br/>`Light Cup`
-<br/>`Hall Magnetic Sensor`
-<br/>`Relay`
-<br/>`Linear Hall Sensor`
-<br/>`SMD RGB` 
-<br/>`7 Color Flash`
-<br/>`Tilt Switch`
-<br/>`Temperature Sensor`
-<br/>`Big Sound Sensor`
-<br/>`Touch Sensor`
-<br/>`Two-Color LED`
-<br/>`Laser Emitter`
-<br/>`Ball Switch`
-<br/>`Analog Temperature Sensor`
-<br/>`Small Sound Sensor`
-<br/>`Digital Temperature Sensor`
-<br/>`Two-Color LED`
-<br/>`Button`
-<br/>`Photoresistor`
-<br/>`IR Emission`
-<br/>`Tracking` 
-<br/>`SensorBuzzer`
-<br/>`Reed Switch`
-<br/>`Shock Sensor`
-<br/>`Temperature And Humidity Sensor`
-<br/>`IR Receiver`
-<br/>`Avoidance Sensor`
-<br/>`Passive Buzzer`
-<br/>`Mini Reed`
-<br/>`Rotary Encoders`
-<br/>`Analog Hall Sensor`
-<br/>`Tap Module`
-<br/>`Light Blocking`
+`Flame Sensor`
+`RGB LED`
+`Heartbeat Sensor`
+`Light Cup`
+`Hall Magnetic Sensor`
+`Relay`
+`Linear Hall Sensor`
+`SMD RGB` 
+`7 Color Flash`
+`Tilt Switch`
+`Temperature Sensor`
+`Big Sound Sensor`
+`Touch Sensor`
+`Two-Color LED`
+`Laser Emitter`
+`Ball Switch`
+`Analog Temperature Sensor`
+`Small Sound Sensor`
+`Digital Temperature Sensor`
+`Two-Color LED`
+`Button`
+`Photoresistor`
+`IR Emission`
+`Tracking` 
+`SensorBuzzer`
+`Reed Switch`
+`Shock Sensor`
+`Temperature And Humidity Sensor`
+`IR Receiver`
+`Avoidance Sensor`
+`Passive Buzzer`
+`Mini Reed`
+`Rotary Encoders`
+`Analog Hall Sensor`
+`Tap Module`
+`Light Blocking`
