@@ -8,7 +8,6 @@
 </div>
 
 # List of Sensors Covered in this Repo
------------------------------------
 `JoyStick`
 <br/>`Flame Sensor`
 <br/>`RGB LED`
