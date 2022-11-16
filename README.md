@@ -8,7 +8,7 @@
 </div>
 
 # List of Sensors Covered in this Repo
-`JoyStick`
+[`JoyStick`](https://github.com/Sanjay0302/Sensor-Workshop-/blob/main/Joystick.md)
 `Flame Sensor`
 `RGB LED`
 `Heartbeat Sensor`
