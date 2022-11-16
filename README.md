@@ -9,39 +9,39 @@
 
 # List of Sensors Covered in this Repo
 [`JoyStick`](https://github.com/Sanjay0302/Sensor-Workshop-/blob/main/Joystick.md)
-`Flame Sensor`
-`RGB LED`
-`Heartbeat Sensor`
+[`Flame Sensor`]()
+[`RGB LED`]()
+[`Heartbeat Sensor`]()
 [`Light Cup`]()
 [`Hall Magnetic Sensor`]()
-`Relay`
+[`Relay`]()
 [`Linear Hall Sensor`]()
-`SMD RGB` 
-`7 Color Flash`
+[`SMD RGB`]()
+[`7 Color Flash`]()
 [`Tilt Switch`]()
 [`Temperature Sensor`]()
-`Big Sound Sensor`
-`Touch Sensor`
-`Two-Color LED`
-`Laser Emitter`
-`Ball Switch`
+[`Big Sound Sensor`]()
+[`Touch Sensor`]()
+[`Two-Color LED`]()
+[`Laser Emitter`]()
+[`Ball Switch`]()
 [`Analog Temperature Sensor`]()
-`Small Sound Sensor`
+[`Small Sound Sensor`]()
 [`Digital Temperature Sensor`]()
-`Two-Color LED`
-`Button`
+[`Two-Color LED`]()
+[`Button`]()
 [`Photoresistor`]()
 [`IR Emission`]()
 [`Tracking` ]()
-`SensorBuzzer`
+[`SensorBuzzer`]()
 [`Reed Switch`]()
-`Shock Sensor`
+[`Shock Sensor`]()
 [`Temperature And Humidity Sensor`]()
 [`IR Receiver`]()
-`Avoidance Sensor`
-`Passive Buzzer`
+[`Avoidance Sensor`]()
+[`Passive Buzzer`]()
 [`Mini Reed`]()
-`Rotary Encoders`
+[`Rotary Encoders`]()
 [`Analog Hall Sensor`]()
-`Tap Module`
-`Light Blocking`
+[`Tap Module`]()
+[`Light Blocking`]()
