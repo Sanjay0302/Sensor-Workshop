@@ -12,7 +12,7 @@
   </br>
   
 # List of Sensors Covered in this Repo
-[`JoyStick`](https://github.com/Sanjay0302/Sensor-Workshop-/blob/main/Joystick.md)
+[`JoyStick`]()
 [`Flame Sensor`]()
 [`RGB LED`]()
 [`Heartbeat Sensor`]()
