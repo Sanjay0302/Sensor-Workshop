@@ -12,36 +12,36 @@
 `Flame Sensor`
 `RGB LED`
 `Heartbeat Sensor`
-`Light Cup`
-`Hall Magnetic Sensor`
+[`Light Cup`]()
+[`Hall Magnetic Sensor`]()
 `Relay`
-`Linear Hall Sensor`
+[`Linear Hall Sensor`]()
 `SMD RGB` 
 `7 Color Flash`
-`Tilt Switch`
-`Temperature Sensor`
+[`Tilt Switch`]()
+[`Temperature Sensor`]()
 `Big Sound Sensor`
 `Touch Sensor`
 `Two-Color LED`
 `Laser Emitter`
 `Ball Switch`
-`Analog Temperature Sensor`
+[`Analog Temperature Sensor`]()
 `Small Sound Sensor`
-`Digital Temperature Sensor`
+[`Digital Temperature Sensor`]()
 `Two-Color LED`
 `Button`
-`Photoresistor`
-`IR Emission`
-`Tracking` 
+[`Photoresistor`]()
+[`IR Emission`]()
+[`Tracking` ]()
 `SensorBuzzer`
-`Reed Switch`
+[`Reed Switch`]()
 `Shock Sensor`
-`Temperature And Humidity Sensor`
-`IR Receiver`
+[`Temperature And Humidity Sensor`]()
+[`IR Receiver`]()
 `Avoidance Sensor`
 `Passive Buzzer`
-`Mini Reed`
+[`Mini Reed`]()
 `Rotary Encoders`
-`Analog Hall Sensor`
+[`Analog Hall Sensor`]()
 `Tap Module`
 `Light Blocking`
