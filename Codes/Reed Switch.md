@@ -1,8 +1,13 @@
 [`Back To Index`](https://github.com/Sanjay0302/Sensor-Workshop-#readme)
 
-# Reed Switch
+# Reed Switch Analog [ky025]
+A reed switch is a switch that needs a magnet in front of it to switch on or off
+
 Components on sensor board are same as Linear hall sensor
 
+</div>
+<div id="header" align="center" >
+  
 | Pins | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `Gnd`| `Input` | `-` |
@@ -18,6 +23,7 @@ Components on sensor board are same as Linear hall sensor
 |LM 393 | R4 1k |
 |6 Resistor | R5 1k |
 |2 LED | R6 100k |
+</div>
 
 ```c
 //This is same as ky024 hall sensor
