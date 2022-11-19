@@ -2,6 +2,9 @@
 
 # Hall Sensor (Digital)
 
+Hall-effect switches are integrated circuits with magnetic specifications.  The sensor is suitable for continuous operation at temperatures up to +150 °C and is characterized by its stability to temperature and supply voltage changes. Each unit is equipped with a reverse polarity protection diode, a square Hall voltage generator, temperature compensation circuit, small signal amplifier, Schmitt trigger and an open collector output to sink up to 25 mA. The transistor switches through if the module is held in a magnetic field. This can then be read out at the signal output as an analog voltage value.
+
+[`Reff link`](https://sensorkit.joy-it.net/en/sensors/ky-003)
 
 </div>
 <div id="header" align="center" >
@@ -15,7 +18,7 @@
 | Other Componemts Used on sensor Board|
 | :------------------------- |
 | On board LED |
-| Hall Sensor|
+| Hall Sensor Transistor A3144|
 | 680 ohms Resistor|
 
 </div>
@@ -47,6 +50,12 @@ void loop()
 
 # Linear Hall Sensor (Analog) 
 
+This sensor has three functional components on its circuit board: The front sensor unit, which physically measures the environment and outputs it as an analog signal to the second unit, the amplifier. This amplifies the signal depending on the resistance set on the rotary potentiometer and sends it to the analog output of the module.
+
+[`Reff link`](https://sensorkit.joy-it.net/en/sensors/ky-024)
+
+</div>
+<div id="header" align="center" >
 | Pins | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `Gnd`| `Input` | `-` |
@@ -57,11 +66,13 @@ void loop()
 | Other Componemts Used on sensor Board | Resistor value |
 | :-------------------------  | :-------------------------  |
 | On board LED | R1 10k |
-| Hall Sensor|  R2 100k |
-|Pot | R3 150 |
+| Hall Sensor Transistor AH49E|  R2 100k |
+|Potentiometer | R3 150 |
 |LM 393 | R4 1k |
 |6 Resistor | R5 1k |
 |2 LED | R6 100k |
+|Accuracy 9-12 bit|
+</div>
 
 ```c
 int Led = 2 ; // define onboard LED Interface
