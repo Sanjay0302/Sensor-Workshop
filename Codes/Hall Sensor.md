@@ -64,8 +64,8 @@ void loop()
 |2 LED | R6 100k |
 
 ```c
-int Led = 13 ; // define LED Interface
-int buttonpin = 3; // define the linear Hall magnetic sensor interface
+int Led = 2 ; // define onboard LED Interface
+int buttonpin = 36; // define the linear Hall magnetic sensor interface
 int val ; // define numeric variables val
 void setup ()
 {
