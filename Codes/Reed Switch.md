@@ -1,6 +1,6 @@
 [`Back To Index`](https://github.com/Sanjay0302/Sensor-Workshop-#readme)
 
-# Reed Switch Analog [ky025]
+# Reed Switch Analog 
 A reed switch is a switch that needs a magnet in front of it to switch on or off
 
 Components on sensor board are same as Linear hall sensor
