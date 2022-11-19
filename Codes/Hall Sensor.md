@@ -17,9 +17,9 @@ Hall-effect switches are integrated circuits with magnetic specifications.  The 
 
 | Other Componemts Used on sensor Board|
 | :------------------------- |
-| On board LED |
-| Hall Sensor Transistor A3144|
-| 680 ohms Resistor|
+| `On board LED` |
+| `Hall Sensor Transistor A3144`|
+| `680 ohms Resistor`|
 
 </div>
 
@@ -56,6 +56,7 @@ This sensor has three functional components on its circuit board: The front sens
 
 </div>
 <div id="header" align="center" >
+
 | Pins | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `Gnd`| `Input` | `-` |
@@ -65,13 +66,13 @@ This sensor has three functional components on its circuit board: The front sens
 
 | Other Componemts Used on sensor Board | Resistor value |
 | :-------------------------  | :-------------------------  |
-| On board LED | R1 10k |
-| Hall Sensor Transistor AH49E|  R2 100k |
-|Potentiometer | R3 150 |
-|LM 393 | R4 1k |
-|6 Resistor | R5 1k |
-|2 LED | R6 100k |
-|Accuracy 9-12 bit|
+| `On board LED` | `R1 10k`|
+| `Hall Sensor Transistor AH49E`| `R2 100k` |
+|`Potentiometer `| `R3 150` |
+|`LM 393` | `R4 1k` |
+|`6 Resistor` | `R5 1k` |
+|`2 LED` |`R6 100k` |
+|`Accuracy 9-12 bit`|
 </div>
 
 ```c
