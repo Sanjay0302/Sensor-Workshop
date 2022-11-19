@@ -4,6 +4,7 @@
 
 The knock sensor, detects the knocks and the taps. It can work like a switch. The sensor sends data momentarily to the board. To keep the LED on, the button state change codes should be used. So the sensor will work as a switch.
 
+[`Reff link`](https://sensorkit.joy-it.net/en/sensors/ky-031)
 
 ```c
 const int  buttonPin = 26;    // the pin that the pushbutton is attached to
