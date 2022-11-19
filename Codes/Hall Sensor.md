@@ -45,7 +45,7 @@ void loop()
     sensorvalue = digitalRead(sensorpin);   // digital read only 0 or 1
     Serial.println("Sensorvalue: ");        // println means print in next line
     Serial.print(sensorvalue);              // print   means just print in the same line or at the position of the cursor
-  
+}  
 ```
 
 # Linear Hall Sensor (Analog) 
