@@ -1,3 +1,5 @@
+[`Back To Index`](https://github.com/Sanjay0302/Sensor-Workshop-#readme)
+
 # IR Avoidance Sensor
 
 This sensor uses a infrared emitter and receiver to check whether there are any obstacles in front of it. This can be useful for a robot.
