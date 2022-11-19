@@ -24,7 +24,7 @@ The Tilt Switch is a mercury tilt switch that allows you to detect the tilt of y
 ```c
 //KY017 Mercury open optical module
 int Led = 2 ;// define onboard LED Interface
-int sensorpin = 3; // define the mercury tilt switch sensor interface
+int sensorpin = 26; // define the mercury tilt switch sensor interface
 int val ;// define numeric variables val
 void setup ()
 {
