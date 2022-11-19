@@ -16,7 +16,7 @@
 | :------------------------- |
 | On board LED |
 | Hall Sensor|
-| Linear Component for Voltage regulation|
+| 680 ohms Resistor|
 
 </div>
 
