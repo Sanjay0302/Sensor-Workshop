@@ -57,10 +57,45 @@ void loop ()
 }
 
 ```
-[Back To Index](https://github.com/Sanjay0302/Sensor-Workshop-#readme)
+
 
 # Mini Reed Switch
+
+</div>
+<div id="header" align="center" >
+
+| Pins | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `Gnd`| `Input` | `-` |
+| `Vcc`| `Input` | `-` |
+| `Signal`| `Output` | `Digital` |
+
+| Other Componemts Used on sensor Board|
+| :------------------------- |
+| On board LED |
+| Hall Sensor|
+| 680 ohms Resistor|
+
+</div>
+
 ```c
 
 
+#include <dummy.h>            
+int sensorpin = 26;           // using digital pin 25 0r 26
+int sensorvalue = 0;          //sensor initial value
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(sensorpin, INPUT); 
+  
+}
+
+void loop()
+{
+    sensorvalue = digitalRead(sensorpin);   // digital read only 0 or 1
+    Serial.println("Sensorvalue: ");        // println means print in next line
+    Serial.print(sensorvalue);              // print   means just print in the same line or at the position of the cursor
+  
 ```
