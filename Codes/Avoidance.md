@@ -1,6 +1,6 @@
-# IR Avoidance Semsor
+# IR Avoidance Sensor
 
-
+This sensor uses a infrared emitter and receiver to check whether there are any obstacles in front of it. This can be useful for a robot.
 
 ```c
 int Led = 2 ;// define onboard LED Interface
