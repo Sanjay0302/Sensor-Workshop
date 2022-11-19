@@ -3,6 +3,7 @@
 # Tracking Sensor
 
 The sensor module detects whether there is a light-reflecting or light-absorbing surface in front of the sensor. This is output at the digital output of the sensor. This behavior can be used, for example, in controllers such as those used in robots for autonomous line tracking. The sensitivity of the sensor can additionally be adjusted via the two controllers.
+
 [`Reff link`](https://sensorkit.joy-it.net/en/sensors/ky-033)
 
 ```c
