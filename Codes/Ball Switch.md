@@ -5,8 +5,8 @@
 This sensor contains a small metal ball which will complete a circuit depending on the position in the sensor. Because the sensor is very basic, it can only detect large changes when its tilt, and can not measure the angle of its tilt.
 
 ```c
-int Led = 13 ;// define LED Interface
-int buttonpin = 3; // define the tilt switch sensor interfaces
+int Led = 2 ;// define LED Interface
+int buttonpin = 26; // define the tilt switch sensor interfaces
 int val ;// define numeric variables val
 void setup ()
 {
