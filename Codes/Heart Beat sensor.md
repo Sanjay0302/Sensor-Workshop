@@ -1,4 +1,4 @@
-[`BAck To Index`](https://github.com/Sanjay0302/Sensor-Workshop-#readme)
+[`Back To Index`](https://github.com/Sanjay0302/Sensor-Workshop-#readme)
 
 # Heart Beat sensor
 
