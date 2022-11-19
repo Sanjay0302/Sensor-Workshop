@@ -15,7 +15,8 @@
   
 | Other Componemts Used on sensor Board|
 | :------------------------- |
-| Res - 10k|
+| Joystick handle|
+| Switch |
 </div>
 
 ```c
