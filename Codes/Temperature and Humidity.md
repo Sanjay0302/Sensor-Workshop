@@ -114,7 +114,7 @@ void loop() {
 ```
 
 # Digital Temparatur Sensor
-[`Reff link`](https://sensorkit.joy-it.net/en/sensors/ky-028)
+
 
 This module contains an NTC thermistor, which can measure temperatures in the range of -55°C up to +125°C. The resistance value of the thermistor decreases with increasing temperatures.
 
@@ -123,6 +123,8 @@ This sensor has three functional components on its circuit board: The front sens
 Here it is to be noted: The signal is inverted. If a high value is measured, this results in a lower voltage value at the analog output.
 
 The third unit represents a comparator, which switches the digital output and the LED when the signal falls below a certain value. This value (and thus the sensitivity of the module) can be adjusted via the rotary potentiometer:
+
+[`Reff link`](https://sensorkit.joy-it.net/en/sensors/ky-028)
 
 </div>
 <div id="header" align="center" >
