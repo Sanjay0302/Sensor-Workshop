@@ -1,3 +1,5 @@
+[`Back To Index`](https://github.com/Sanjay0302/Sensor-Workshop-#readme)
+
 # Tap Module
 
 The knock sensor, detects the knocks and the taps. It can work like a switch. The sensor sends data momentarily to the board. To keep the LED on, the button state change codes should be used. So the sensor will work as a switch.
