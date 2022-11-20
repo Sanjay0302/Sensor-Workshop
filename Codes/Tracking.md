@@ -6,6 +6,12 @@ The sensor module detects whether there is a light-reflecting or light-absorbing
 
 [`Reff link`](https://sensorkit.joy-it.net/en/sensors/ky-033)
 
+| Pins | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `Gnd`| `Input` | `-` |
+| `Vcc`| `Input` | `-` |
+| `Signal`| `Output` | `Digital` |
+
 ```c
 int Sensor  =  21;  // Declaration of the sensor input spin
    
