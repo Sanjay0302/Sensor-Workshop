@@ -56,7 +56,6 @@ https://api.telegram.org/bot<your-bot-token>/sendMessage?chat_id=<chat-id>&text=
 
 ```c
 #include <dummy.h>
-#include <ESP8266WiFi.h>
 #include <WiFiClientSecure.h>
 #include <UniversalTelegramBot.h>
 
