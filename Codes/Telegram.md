@@ -1,4 +1,4 @@
-# Template
+
 
 ![image](https://user-images.githubusercontent.com/90672297/203082781-cc4198bd-8e74-4513-9b6b-4f318f945586.png)
 
@@ -24,6 +24,8 @@ Requirements For Below Message Type:
 -[`Video`](https://core.telegram.org/bots/api#video)
 
 -[`MORE in this documentation`](https://core.telegram.org/bots/api#voice)
+
+# Template
 
 ```c
 #include <dummy.h>
@@ -108,6 +110,19 @@ void loop()
   }
 }
 ```
+# Echo Bot
+
+Replace The `Void handleNewMessages()` function  
+```c
+void handleNewMessages(int numNewMessages)
+{
+  for (int i = 0; i < numNewMessages; i++)
+  {
+    bot.sendMessage(bot.messages[i].chat_id, bot.messages[i].text, "");
+  }
+}
+```
+
 # Getupdate on bot when bot is started 
 ```c
 #include <WiFi.h>
@@ -154,7 +169,6 @@ void loop() {
 
 # Sending Photo Using Url
 
-Replace The `Void handleNewMessages()` function  
 
 ```c
 
@@ -318,3 +332,116 @@ void handleNewMessages(int numNewMessages)
   }
 }
 ```
+# Inline Keyboard
+
+```c
+void handleNewMessages(int numNewMessages)
+{
+  for (int i = 0; i < numNewMessages; i++)
+  {
+    // Inline buttons with callbacks when pressed will raise a callback_query message
+    if (bot.messages[i].type == "callback_query")
+    {
+      Serial.print("Call back button pressed by: ");
+      Serial.println(bot.messages[i].from_id);
+      Serial.print("Data on the button: ");
+      Serial.println(bot.messages[i].text);
+      bot.sendMessage(bot.messages[i].from_id, bot.messages[i].text, "");
+    }
+    else
+    {
+      String chat_id = bot.messages[i].chat_id;
+      String text = bot.messages[i].text;
+
+      String from_name = bot.messages[i].from_name;
+      if (from_name == "")
+        from_name = "Guest";
+
+      if (text == "/options")
+      {
+        String keyboardJson = "[[{ \"text\" : \"Go to Google\", \"url\" : \"https://www.google.com\" }],[{ \"text\" : \"Send\", \"callback_data\" : \"This was sent by inline\" }]]";
+        bot.sendMessageWithInlineKeyboard(chat_id, "Choose from one of the following options", "", keyboardJson);
+      }
+
+      if (text == "/start")
+      {
+        String welcome = "Welcome to Universal Arduino Telegram Bot library, " + from_name + ".\n";
+        welcome += "This is Inline Keyboard Markup example.\n\n";
+        welcome += "/options : returns the inline keyboard\n";
+
+        bot.sendMessage(chat_id, welcome, "Markdown");
+      }
+    }
+  }
+}
+
+```
+# Reply Keyboard Markup (Turn On and of Led) 
+```c
+const int ledPin = 2; //inbuilt led : GPIO 2
+int ledStatus = 0;
+
+void handleNewMessages(int numNewMessages)
+{
+  Serial.println("handleNewMessages");
+  Serial.println(String(numNewMessages));
+
+  for (int i = 0; i < numNewMessages; i++)
+  {
+    String chat_id = bot.messages[i].chat_id;
+    String text = bot.messages[i].text;
+
+    String from_name = bot.messages[i].from_name;
+    if (from_name == "")
+      from_name = "Guest";
+
+    if (text == "/ledon")
+    {
+      digitalWrite(ledPin, HIGH); // turn the LED on (HIGH is the voltage level)
+      ledStatus = 1;
+      bot.sendMessage(chat_id, "Led is ON", "Caption is optional");
+    }
+
+    if (text == "/ledoff")
+    {
+      ledStatus = 0;
+      digitalWrite(ledPin, LOW); // turn the LED off (LOW is the voltage level)
+      bot.sendMessage(chat_id, "Led is OFF", "");
+    }
+
+    if (text == "/status")
+    {
+      if (ledStatus)
+      {
+        bot.sendMessage(chat_id, "Led is ON", "");
+      }
+      else
+      {
+        bot.sendMessage(chat_id, "Led is OFF", "");
+      }
+    }
+
+    if (text == "/options")
+    {
+      String keyboardJson = "[[\"/ledon\", \"/ledoff\"],[\"/status\"]]";
+      bot.sendMessageWithReplyKeyboard(chat_id, "Choose from one of the following options", "", keyboardJson, true);
+    }
+
+    if (text == "/start")
+    {
+      String welcome = "Welcome to Universal Arduino Telegram Bot library, " + from_name + ".\n";
+      welcome += "This is Reply Keyboard Markup example.\n\n";
+      welcome += "/ledon : to switch the Led ON\n";
+      welcome += "/ledoff : to switch the Led OFF\n";
+      welcome += "/status : Returns current status of LED\n";
+      welcome += "/options : returns the reply keyboard\n";
+      bot.sendMessage(chat_id, welcome, "Markdown");
+    }
+  }
+}
+```
+
+# Update Inline Keyboard
+
+[`Update Inline Keyboard`]()
+
