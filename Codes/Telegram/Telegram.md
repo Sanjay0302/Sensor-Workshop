@@ -152,8 +152,8 @@ void handleNewMessages(int numNewMessages)
 # Getupdate on bot when bot is started 
 
 
--void handleNewMessages(int numNewMessages) empty
--//void loop() is also EMPTY
+- void handleNewMessages(int numNewMessages) empty
+- void loop() is also EMPTY
 
 ```c
 
@@ -343,7 +343,7 @@ void handleNewMessages(int numNewMessages)
 ```
 # Location Data
 
-[`full code`]()
+[`full code`](https://github.com/Sanjay0302/Sensor-Workshop-/blob/main/Codes/Telegram/Location%20Data.md#-)
 
 ```c
 
