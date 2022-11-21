@@ -7,10 +7,10 @@
 
 
 // Wifi network station credentials
-#define WIFI_SSID "M32"
-#define WIFI_PASSWORD "87654321"
+#define WIFI_SSID "ssid"
+#define WIFI_PASSWORD "password"
 // Telegram BOT Token (Get from Botfather)
-#define BOT_TOKEN "5845543294:AAH1XJD5DVVGt4Si8nhUYCzQc9q7vsIFyGo"
+#define BOT_TOKEN "bottoken"
 
 const unsigned long BOT_MTBS = 1000; // mean time between scan messages
 
