@@ -242,6 +242,11 @@ void handleNewMessages(int numNewMessages) {
 # Set Commands
 
 [`full code`](https://github.com/Sanjay0302/Sensor-Workshop-/blob/main/Codes/Telegram/Setcommands.md#-)
+  </div>
+  <img src="https://user-images.githubusercontent.com/90672297/203146678-c7ebc719-8b38-4e9d-82c3-db5956940889.png" width="200" height="200"/>
+
+</div>
+
 
 ```c
 
@@ -293,6 +298,11 @@ void bot_setup()
 // Don't forget to add this in void setup() : add this at the end of setuploop:   bot_setup();
 ```
 # Chat Actions
+ </div>
+  <img src="https://user-images.githubusercontent.com/90672297/203148623-fbc02924-7fdb-4b43-9880-f0655920b1ec.png" width="200" height="200"/>
+
+</div>
+
 
 [`full code`](https://github.com/Sanjay0302/Sensor-Workshop-/blob/main/Codes/Telegram/Chat%20action.md#-)
 
@@ -343,6 +353,14 @@ void handleNewMessages(int numNewMessages)
 ```
 # Location Data
 
+
+
+ </div>
+  <img src="https://user-images.githubusercontent.com/90672297/203149151-2bb4f6c1-470f-4d79-9dec-938c39165bae.png" width="200" height="200"/>
+
+</div>
+
+
 [`full code`](https://github.com/Sanjay0302/Sensor-Workshop-/blob/main/Codes/Telegram/Location%20Data.md#-)
 
 ```c
@@ -380,6 +398,14 @@ void handleNewMessages(int numNewMessages)
 }
 ```
 # Inline Keyboard
+
+
+
+ </div>
+  <img src="https://user-images.githubusercontent.com/90672297/203149208-aac024c1-7ceb-45ea-b29c-89df10e785f7.png" width="200" height="200"/>
+
+</div>
+
 
 [`full code`](https://github.com/Sanjay0302/Sensor-Workshop-/blob/main/Codes/Telegram/Inline%20Keyboard.md#-)
 
@@ -426,6 +452,13 @@ void handleNewMessages(int numNewMessages)
 
 ```
 # Reply Keyboard Markup (Turn On and of Led)
+
+
+ </div>
+  <img src="https://user-images.githubusercontent.com/90672297/203149240-830fbc63-27be-4c2d-98b7-add761d4fbe6.png" width="200" height="200"/>
+
+</div>
+
 
 [`full code`](https://github.com/Sanjay0302/Sensor-Workshop-/blob/main/Codes/Telegram/Reply%20Keyboard%20Markup.md#-)
 
