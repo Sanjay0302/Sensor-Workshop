@@ -108,6 +108,50 @@ void loop()
   }
 }
 ```
+# Getupdate on bot when bot is started 
+```c
+#include <WiFi.h>
+#include <WiFiClientSecure.h>
+#include <UniversalTelegramBot.h>
+#include <ArduinoJson.h>
+
+#define WIFI_SSID "YOUR_SSID"
+#define WIFI_PASSWORD "YOUR_PASSWORD"
+#define BOT_TOKEN "XXXXXXXXX:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+#define CHAT_ID "YOUR_CHAT_ID"            // Use @myidbot (IDBot) to find out the chat ID of an individual or a group
+                                          // Also note that you need to click "start" on a bot before it can
+
+WiFiClientSecure secured_client;
+UniversalTelegramBot bot(BOT_TOKEN, secured_client);
+
+void setup() {
+  Serial.begin(115200);
+  Serial.println();
+
+ // attempt to connect to Wifi network:
+  Serial.print("Connecting to Wifi SSID ");
+  Serial.print(WIFI_SSID);
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+  secured_client.setCACert(TELEGRAM_CERTIFICATE_ROOT); // Add root certificate for api.telegram.org
+  while (WiFi.status() != WL_CONNECTED)
+  {
+    Serial.print(".");
+    delay(500);
+  }
+  Serial.print("\nWiFi connected. IP address: ");
+  Serial.println(WiFi.localIP());
+  
+  //just sending the msg that bot is started 
+  bot.sendMessage(CHAT_ID, "Bot started up", "");
+}
+
+void loop() {
+
+}
+```
+
+
+
 # Sending Photo Using Url
 
 Replace The `Void handleNewMessages()` function  
@@ -235,6 +279,41 @@ void handleNewMessages(int numNewMessages)
       welcome += "This is Chat Action Bot example.\n\n";
       welcome += "/send_test_action : to send test chat action message\n";
       bot.sendMessage(chat_id, welcome);
+    }
+  }
+}
+```
+# Location Data
+```c
+
+void handleNewMessages(int numNewMessages)
+{
+  for (int i = 0; i < numNewMessages; i++)
+  {
+    String chat_id = bot.messages[i].chat_id;
+    String text = bot.messages[i].text;
+
+    String from_name = bot.messages[i].from_name;
+    if (from_name == "")
+      from_name = "Guest";
+
+    if (bot.messages[i].longitude != 0 || bot.messages[i].latitude != 0)
+    {
+      Serial.print("Long: ");
+      Serial.println(String(bot.messages[i].longitude, 6));     // In this 6 incates the horizontal_accuracy 
+      Serial.print("Lat: ");                                    // Reff: https://core.telegram.org/bots/api#location
+      Serial.println(String(bot.messages[i].latitude, 6));
+
+      String message = "Long: " + String(bot.messages[i].longitude, 6) + "\n";  
+      message += "Lat: " + String(bot.messages[i].latitude, 6) + "\n";
+      bot.sendMessage(chat_id, message, "Markdown");
+    }
+    else if (text == "/start")
+    {
+      String welcome = "Welcome to Universal Arduino Telegram Bot library, " + from_name + ".\n";
+      welcome += "Share a location or a live location and the bot will respond with the co-ords\n";
+
+      bot.sendMessage(chat_id, welcome, "Markdown");
     }
   }
 }
