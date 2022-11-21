@@ -243,7 +243,7 @@ void handleNewMessages(int numNewMessages) {
 
 [`full code`](https://github.com/Sanjay0302/Sensor-Workshop-/blob/main/Codes/Telegram/Setcommands.md#-)
   </div>
-  <img src="https://user-images.githubusercontent.com/90672297/203146678-c7ebc719-8b38-4e9d-82c3-db5956940889.png" width="200" height="200"/>
+  <img src="https://user-images.githubusercontent.com/90672297/203146678-c7ebc719-8b38-4e9d-82c3-db5956940889.png" width="500" height="250"/>
 
 </div>
 
