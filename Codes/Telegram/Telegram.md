@@ -381,7 +381,7 @@ void handleNewMessages(int numNewMessages)
 ```
 # Inline Keyboard
 
-[`full code`](https://github.com/Sanjay0302/Sensor-Workshop-/new/main/Codes/Telegram#-)
+[`full code`](https://github.com/Sanjay0302/Sensor-Workshop-/blob/main/Codes/Telegram/Inline%20Keyboard.md#-)
 
 ```c
 void handleNewMessages(int numNewMessages)
