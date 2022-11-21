@@ -31,6 +31,10 @@ Requirements For Below Message Type:
 https://api.telegram.org/bot<token>/<METHOD_NAME>`
 ```
 ```python
+https://api.telegram.org/bot<your-bot-token>/getMe
+```
+
+```python
 https://api.telegram.org/bot<your-bot-token>/getUpdates
 ```
 
