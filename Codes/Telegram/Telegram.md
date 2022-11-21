@@ -150,7 +150,14 @@ void handleNewMessages(int numNewMessages)
 ```
 
 # Getupdate on bot when bot is started 
+
+
+-void handleNewMessages(int numNewMessages) empty
+-//void loop() is also EMPTY
+
 ```c
+
+
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
 #include <UniversalTelegramBot.h>
@@ -159,8 +166,11 @@ void handleNewMessages(int numNewMessages)
 #define WIFI_SSID "YOUR_SSID"
 #define WIFI_PASSWORD "YOUR_PASSWORD"
 #define BOT_TOKEN "XXXXXXXXX:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-#define CHAT_ID "YOUR_CHAT_ID"            // Use @myidbot (IDBot) to find out the chat ID of an individual or a group
-                                          // Also note that you need to click "start" on a bot before it can
+
+// Use @myidbot (IDBot) to find out the chat ID of an individual or a group
+// Also note that you need to click "start" on a bot before it can message you
+
+#define CHAT_ID "YOUR_CHAT_ID"
 
 WiFiClientSecure secured_client;
 UniversalTelegramBot bot(BOT_TOKEN, secured_client);
@@ -169,7 +179,6 @@ void setup() {
   Serial.begin(115200);
   Serial.println();
 
- // attempt to connect to Wifi network:
   Serial.print("Connecting to Wifi SSID ");
   Serial.print(WIFI_SSID);
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
@@ -181,14 +190,15 @@ void setup() {
   }
   Serial.print("\nWiFi connected. IP address: ");
   Serial.println(WiFi.localIP());
-  
-  //just sending the msg that bot is started 
+
+  //this is the extra line that should be added
   bot.sendMessage(CHAT_ID, "Bot started up", "");
 }
 
 void loop() {
 
 }
+
 ```
 
 
