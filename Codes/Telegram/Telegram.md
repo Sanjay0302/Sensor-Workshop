@@ -278,6 +278,9 @@ void bot_setup()
   bot.setMyCommands(commands);
   //bot.sendMessage("25235518", "Hola amigo!", "Markdown");
 }
+
+
+// Don't forget to add this in void setup() : add this at the end of setuploop:   bot_setup();
 ```
 # Chat Actions
 
