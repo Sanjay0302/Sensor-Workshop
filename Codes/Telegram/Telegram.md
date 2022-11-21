@@ -231,7 +231,7 @@ void handleNewMessages(int numNewMessages) {
 ```
 # Set Commands
 
-[`full code`]()
+[`full code`](https://github.com/Sanjay0302/Sensor-Workshop-/blob/main/Codes/Telegram/Setcommands.md#-)
 
 ```c
 
