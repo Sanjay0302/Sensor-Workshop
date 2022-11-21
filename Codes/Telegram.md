@@ -86,20 +86,13 @@ void setup()
   Serial.print("\nWiFi connected. IP address: ");
   Serial.println(WiFi.localIP());
 
-  // Check NTP/Time, usually it is instantaneous and you can delete the code below.
-  Serial.print("Retrieving time: ");
-  time_t now = time(nullptr);
-  while (now < 24 * 3600)
-  {
-    Serial.print(".");
-    delay(100);
-    now = time(nullptr);
-  }
-  Serial.println(now);
+
 }
 
 void loop()
 {
+  //Millis() Reff: https://arduinogetstarted.com/reference/arduino-millis
+  
   if (millis() - bot_lasttime > BOT_MTBS)
   {
     int numNewMessages = bot.getUpdates(bot.last_message_received + 1);
