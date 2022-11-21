@@ -205,7 +205,7 @@ void loop() {
 
 # Sending Photo Using Url
 
-[`full code`]()
+[`full code`](https://github.com/Sanjay0302/Sensor-Workshop-/blob/main/Codes/Telegram/Sending%20Photo.md#-)
 
 ```c
 
@@ -294,7 +294,7 @@ void bot_setup()
 ```
 # Chat Actions
 
-[`full code`]()
+[`full code`](https://github.com/Sanjay0302/Sensor-Workshop-/blob/main/Codes/Telegram/Chat%20action.md#-)
 
 ```c
 bool Start = false;
@@ -381,7 +381,7 @@ void handleNewMessages(int numNewMessages)
 ```
 # Inline Keyboard
 
-[`full code`]()
+[`full code`](https://github.com/Sanjay0302/Sensor-Workshop-/new/main/Codes/Telegram#-)
 
 ```c
 void handleNewMessages(int numNewMessages)
@@ -427,7 +427,7 @@ void handleNewMessages(int numNewMessages)
 ```
 # Reply Keyboard Markup (Turn On and of Led)
 
-[`full code`]()
+[`full code`](https://github.com/Sanjay0302/Sensor-Workshop-/blob/main/Codes/Telegram/Reply%20Keyboard%20Markup.md#-)
 
 ```c
 const int ledPin = 2; //inbuilt led : GPIO 2
@@ -491,5 +491,13 @@ void handleNewMessages(int numNewMessages)
     }
   }
 }
+
+//add this 3 lines in setuploop
+
+//  pinMode(ledPin, OUTPUT); // initialize digital ledPin as an output.
+// delay(10);
+//  digitalWrite(ledPin, HIGH); // initialize pin as on
+//  delay(2000);
+//  digitalWrite(ledPin, LOW); // initialize pin as off
 ```
 
