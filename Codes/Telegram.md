@@ -2,7 +2,7 @@
 
 ![image](https://user-images.githubusercontent.com/90672297/203082781-cc4198bd-8e74-4513-9b6b-4f318f945586.png)
 
-[`reff: getting updated methods`](https://core.telegram.org/bots/api#update)
+
 
 # Getting updates
 There are two mutually exclusive ways of receiving updates for your bot - the getUpdates method on one hand and webhooks on the other. Incoming updates are stored on the server until the bot receives them either way, but they will not be kept longer than 24 hours.
@@ -112,6 +112,41 @@ void loop()
     }
 
     bot_lasttime = millis();
+  }
+}
+```
+# Sending Photo Using Url
+
+Replace The `Void handleNewMessages()` function  
+
+```c
+
+String test_photo_url = "PASTE_URL_HERE";
+
+void handleNewMessages(int numNewMessages) {
+  Serial.print("handleNewMessages ");  // print on serial MON that's it
+  Serial.println(numNewMessages);      //These of int Data type Indicates No. of new msg that are queued 
+
+  for (int i=0; i<numNewMessages; i++) {
+    String chat_id = bot.messages[i].chat_id;     //Every new msg will have unique chat_id
+    String text = bot.messages[i].text;           //Print the the txt recieved
+
+    String from_name = bot.messages[i].from_name; //Get the Name of the Client
+    if (from_name == "") from_name = "Guest";     
+
+    //The Below if else Ladder will decide the Response to the Txt recieved
+    
+    if (text == "/get_test_photo") {
+      bot.sendPhoto(chat_id, test_photo_url, "Caption is optional, you may not use photo caption");
+    }
+
+    if (text == "/start") {
+      String welcome = "Welcome to Universal Arduino Telegram Bot library, " + from_name + ".\n";
+      welcome += "This is Send Image From URL example.\n\n";
+      welcome += "/get_test_photo : getting test photo\n";
+
+      bot.sendMessage(chat_id, welcome, "");
+    }
   }
 }
 ```
