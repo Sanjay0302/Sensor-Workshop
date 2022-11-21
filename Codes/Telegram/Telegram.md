@@ -56,19 +56,21 @@ https://api.telegram.org/bot<your-bot-token>/sendMessage?chat_id=<chat-id>&text=
 
 ```c
 #include <dummy.h>
+#include <WiFi.h>
 #include <WiFiClientSecure.h>
 #include <UniversalTelegramBot.h>
 
-const unsigned long BOT_MTBS = 1000; // mean time between scan messages
 
 // Wifi network station credentials
-#define WIFI_SSID "YOUR_SSID"
-#define WIFI_PASSWORD "YOUR_PASSWORD"
+#define WIFI_SSID "M32"
+#define WIFI_PASSWORD "87654321"
 // Telegram BOT Token (Get from Botfather)
-#define BOT_TOKEN "XXXXXXXXX:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+#define BOT_TOKEN "5845543294:AAH1XJD5DVVGt4Si8nhUYCzQc9q7vsIFyGo"
+
+const unsigned long BOT_MTBS = 1000; // mean time between scan messages
 
 unsigned long bot_lasttime;          // last time messages' scan has been done
-X509List cert(TELEGRAM_CERTIFICATE_ROOT);
+
 WiFiClientSecure secured_client;
 UniversalTelegramBot bot(BOT_TOKEN, secured_client);
 
@@ -76,22 +78,8 @@ void handleNewMessages(int numNewMessages)
 {
   for (int i = 0; i < numNewMessages; i++)
   {
-    String chat_id = bot.messages[i].chat_id;
-    String text = bot.messages[i].text;
-
-    String from_name = bot.messages[i].from_name;
-    if (from_name == "")
-      from_name = "Guest";
-
-// In the Below if else ladder we write write what should be the replay for recieved
-    if (condition)
-    {
-      
-    }
-    else if (text == "/start")
-    {
-      
-    }
+    //get chat_id,name,user_id;
+    //if else ladder
   }
 }
 
@@ -102,10 +90,11 @@ void setup()
 
   // attempt to connect to Wifi network:
   configTime(0, 0, "pool.ntp.org");      // get UTC time via NTP
-  secured_client.setTrustAnchors(&cert); // Add root certificate for api.telegram.org
   Serial.print("Connecting to Wifi SSID ");
   Serial.print(WIFI_SSID);
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+  secured_client.setCACert(TELEGRAM_CERTIFICATE_ROOT); // Add root certificate for api.telegram.org
+
   while (WiFi.status() != WL_CONNECTED)
   {
     Serial.print(".");
@@ -114,13 +103,24 @@ void setup()
   Serial.print("\nWiFi connected. IP address: ");
   Serial.println(WiFi.localIP());
 
+  Serial.print("Retrieving time: ");
+  configTime(0, 0, "pool.ntp.org"); // get UTC time via NTP
+  time_t now = time(nullptr);
+  while (now < 24 * 3600)
+  {
+    Serial.print(".");
+    delay(100);
+    now = time(nullptr);
+  }
+  Serial.println(now);
+
 
 }
 
 void loop()
 {
   //Millis() Reff: https://arduinogetstarted.com/reference/arduino-millis
-  
+
   if (millis() - bot_lasttime > BOT_MTBS)
   {
     int numNewMessages = bot.getUpdates(bot.last_message_received + 1);
