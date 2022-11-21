@@ -195,6 +195,8 @@ void bot_setup()
 # Chat Actions
 
 ```c
+bool Start = false;
+
 void handleNewMessages(int numNewMessages)
 {
   Serial.println("handleNewMessages");
