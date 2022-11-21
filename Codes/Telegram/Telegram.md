@@ -33,7 +33,9 @@ Requirements For Below Message Type:
 - MY_CHANNEL_NAME is the handle of your channel (e.g. @my_channel_name)
 - MY_MESSAGE_TEXT is the message you want to send (URL-encoded)
 
-
+# Get your Chat_id
+- Get your `User Chat_ID` and `group Chat_ID` : 
+[`myidbot`](http://telegram.me/myidbot)
 
 # Template
 
