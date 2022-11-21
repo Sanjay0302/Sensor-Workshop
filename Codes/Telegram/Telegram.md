@@ -453,5 +453,5 @@ void handleNewMessages(int numNewMessages)
 
 # Update Inline Keyboard
 
-[`Update Inline Keyboard`]()
+[`Update Inline Keyboard`](https://github.com/Sanjay0302/Sensor-Workshop-/blob/main/Codes/Telegram/Update%20Inline%20Keyboard%20.md#update-inline-keyboard)
 
