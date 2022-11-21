@@ -1,14 +1,8 @@
 # Update Inline Keyboard 
-
+ An example to show how to edit an existing inline keyboard.
+ 
 ```c
-/*******************************************************************
-    An example to show how to edit an existing inline keyboard.
 
-    In this example the keyboard is updated with the state of
-    the LED.
-    
-    written by Frits Jan van Kempen
- *******************************************************************/
 #include <Arduino.h>
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
