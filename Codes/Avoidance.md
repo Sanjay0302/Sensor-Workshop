@@ -5,6 +5,9 @@ This sensor uses infrared light to detect obstacles. If the emitted infrared lig
 
 This sensor also has an enable line. This line can be used to activate or deactivate the detection of the sensor. In the delivery state of the sensor, however, the enable line is deactivated and the sensor is therefore permanently active. If the functionality of the enable line is desired, the jumper EN (green in the picture) must be removed and a corresponding control signal must be applied to the enable pin.
 
+![image](https://user-images.githubusercontent.com/90672297/204039010-19fe7daf-cd5b-4a62-8216-6528ab53b4ae.png)
+
+
 [`Reff link`](https://sensorkit.joy-it.net/en/sensors/ky-032)
 
 | Pins | Type     | Description                |
@@ -20,26 +23,35 @@ This sensor also has an enable line. This line can be used to activate or deacti
 | `IR transmitter and Reciever`|`-`|
 
 ```c
+
+
 int Led = 2 ;// define onboard LED Interface
-int buttonpin = 26; // define the obstacle avoidance sensor interface
-int val ;// define numeric variables val
+int signalpin = 26; // define the obstacle avoidance sensor interface
+
 void setup ()
 {
+  Serial.begin(9600);
   pinMode (Led, OUTPUT) ;// define LED as output interface
-  pinMode (buttonpin, INPUT) ;// define the obstacle avoidance sensor output interface
+  pinMode (signalpin, INPUT) ;// define the obstacle avoidance sensor output interface
 }
 void loop ()
 {
-  val = digitalRead (buttonpin) ;// digital interface will be assigned a value of 26 to read val
+  bool val = digitalRead (signalpin) ;// digital interface will be assigned a value of 26 to read val
   if (val == HIGH) // When the obstacle avoidance sensor detects a signal, LED flashes
   {
     digitalWrite (Led, HIGH);
+    Serial.println("Obstacle Detected");
   }
   else
   {
     digitalWrite (Led, LOW);
+    Serial.println("NO obstacle detected");
   }
+delay(500);
+  
 }
+
+
 
 
 ```
