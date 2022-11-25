@@ -4,6 +4,9 @@
 
 The sensor module detects whether there is a light-reflecting or light-absorbing surface in front of the sensor. This is output at the digital output of the sensor. This behavior can be used, for example, in controllers such as those used in robots for autonomous line tracking. The sensitivity of the sensor can additionally be adjusted via the two controllers.
 
+![image](https://user-images.githubusercontent.com/90672297/204038459-57cd63ea-c4a8-453a-864c-c756096e52dc.png)
+
+
 [`Reff link`](https://sensorkit.joy-it.net/en/sensors/ky-033)
 
 | Pins | Type     | Description                |
@@ -13,30 +16,39 @@ The sensor module detects whether there is a light-reflecting or light-absorbing
 | `Signal`| `Output` | `Digital` |
 
 ```c
-int Sensor  =  21;  // Declaration of the sensor input spin
-   
-void setup  ( )
-{
-  Serial.begin (9600)  ;  // Initialization  serial output
-  pinMode (Sensor, INPUT)   ;  //  Initialization Sensorpin
+
+
+
+
+#define signalpin 21
+#define LED_BUILTIN 2
+
+void setup() {
+Serial.begin(9600);
+pinMode(signalpin,INPUT);
+pinMode(LED_BUILTIN, OUTPUT);
+
 }
-  
-//  The program reads the current state of the sensor pin and
-// displays in the serial console whether the line tracker is currently 
-// on the line or not
-void loop  ( )
+
+void loop() 
 {
-  bool val =  digitalRead (sensor)   ;  //  The current signal on the sensor is read
   
-  if   (val  = =  HIGH )  //  If a signal has been detected, the LED is switched on.
+  bool value = digitalRead(signalpin);
+  if(value == 0)
   {
-    Serial.println (“LineTracker is above the line”);
+    digitalWrite(LED_BUILTIN, HIGH);
+    Serial.println("LineTracker is out of line");
+    Serial.println(value);
+
   }
   else
   {
-    Serial.println (“Linetracker is out of line”);
+     digitalWrite(LED_BUILTIN, LOW);
+     Serial.println("LineTracker is above the line");
+     Serial.println(value);
   }
-  Serial.println (“------------------------------------”)  ;
-  delay (500)  ;  // Pasuse between the measurement of 500ms
+  
+ delay(500);
+  
 }
 ```
