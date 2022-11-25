@@ -47,7 +47,7 @@ the ESP32 should wake up. You can adjust that value accordingly to the desired s
 #define Threshold 40 //Greater the value, more the sensitivity 
 
 RTC_DATA_ATTR int bootCount = 0;  // boot count saved in RTC memory to hold the data even in deepsleep and use that after a reboot
-touch_pad_t touchPin;
+touch_pad_t touchPin;             //instead of of writting touch_pad_t we can write touchpad just like we do with bot variable
 
 
 void setup(){
