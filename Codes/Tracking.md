@@ -18,8 +18,6 @@ The sensor module detects whether there is a light-reflecting or light-absorbing
 ```c
 
 
-
-
 #define signalpin 21
 #define LED_BUILTIN 2
 
@@ -34,7 +32,7 @@ void loop()
 {
   
   bool value = digitalRead(signalpin);
-  if(value == 0)
+  if(value == 0)    //if(value == LOW)
   {
     digitalWrite(LED_BUILTIN, HIGH);
     Serial.println("LineTracker is out of line");
@@ -51,4 +49,5 @@ void loop()
  delay(500);
   
 }
+
 ```
