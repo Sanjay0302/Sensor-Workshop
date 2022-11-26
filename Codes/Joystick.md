@@ -29,7 +29,7 @@
 
 int JoyStick_X = 33;                           // x 
 int JoyStick_Y = 34;                           // y
-int sw = 26;                           // button
+int sw = 21;                           // button
 void setup ()
 {   
   // Here we select the pin and its mode of operation
