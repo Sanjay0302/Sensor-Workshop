@@ -20,6 +20,15 @@ Application programming interfaces, or APIs, simplify software development and i
 
 ![Screenshot 2022-11-26 232245](https://user-images.githubusercontent.com/90672297/204102396-daba3ba6-f2b4-498f-98d0-90ef93adcb4f.png)
 
+# Request Methods
+
+```python 
+https://api.openweathermap.org/data/2.5/weather?q=Bengaluru,IN&APPID=<APIKEY>
+```
+```python
+https://api.openweathermap.org/data/2.5/weather?lat=12.9762&lon=77.6033&appid=<APIKEY>
+```
+
 
 # Getting data from the http requests
 
